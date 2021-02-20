@@ -1,0 +1,32 @@
+/* app/javascript/stylesheets/application.scss */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+
+/* Add any custom CSS here */
+@import "tailwindcss/utilities";
+
+
+html,
+body {
+	height: 100%;
+}
+
+.body {
+	@apply px-0 py-0 grid grid-cols-12 h-full;
+}
+
+.body .sidebar {
+	@apply col-span-2 bg-indigo-900 h-full;
+}
+
+.body .main {
+	@apply col-span-10 h-full bg-gray-100;
+}
+
+.main .header {
+	@apply bg-indigo-400 text-white flex px-2 py-2;
+}
+
+.main .content {
+	@apply bg-gray-100 text-black;
+}

@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title Railstter
+    = csrf_meta_tags
+
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+    = javascript_pack_tag 'application'
+    = stylesheet_pack_tag 'application'
+  body.body
+      = render partial: "layouts/sidebar"
+      .main
+        = render partial: "layouts/header"
+        = render partial: "layouts/flash_messages"
+        .content
+          = yield
